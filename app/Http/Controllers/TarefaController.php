@@ -14,16 +14,17 @@ class TarefaController extends Controller
     public function index()
     {
         $tarefas = tarefa::where('user_id', Auth::user()->id)
-        ->paginate(6)
-        ->through( function($tarefa){
+    ->paginate(6);
 
+        // Transformação dos dados após a consulta
+        $tarefas->getCollection()->transform(function($tarefa) {
             if($tarefa->status == 1){
                 $nomeStatus = "Pendente";
-            }elseif($tarefa->status == 2){
+            } elseif($tarefa->status == 2) {
                 $nomeStatus = "Em andamento";
-            }elseif($tarefa->status == 3){
+            } elseif($tarefa->status == 3) {
                 $nomeStatus = "Concluída";
-            }else{
+            } else {
                 $nomeStatus = "Indefinido";
             }
 
@@ -39,9 +40,10 @@ class TarefaController extends Controller
             ];
         });
 
-        return Inertia::render('Tarefa/Index',[
+        return Inertia::render('Tarefa/Index', [
             "tarefas" => $tarefas
         ]);
+
     }
 
     public function create()

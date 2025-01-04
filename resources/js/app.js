@@ -10,7 +10,6 @@ import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import Toast from '@/Components/Toast.vue';
 
-console.log('Quasar Loaded:', Notify);
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
