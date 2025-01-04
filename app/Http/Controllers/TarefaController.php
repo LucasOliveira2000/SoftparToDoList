@@ -40,8 +40,7 @@ class TarefaController extends Controller
         });
 
         return Inertia::render('Tarefa/Index',[
-            "tarefas" => $tarefas,
-            "flash" => session()->get('flash', [])
+            "tarefas" => $tarefas
         ]);
     }
 

@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps } from 'vue';
-import { router, Head, Link } from '@inertiajs/vue3';
+import { router, Head} from '@inertiajs/vue3';
 import SubmitButton from '@/Components/SubmitButton.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
