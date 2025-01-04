@@ -10,7 +10,6 @@ use Inertia\Inertia;
 
 class TarefaController extends Controller
 {
-
     public function index()
     {
         $tarefas = tarefa::where('user_id', Auth::user()->id)
@@ -36,10 +35,9 @@ class TarefaController extends Controller
             ];
         });
 
-        return Inertia::render('Tarefa/Index', [
+        return Inertia::render('Tarefa/Index',[
             "tarefas" => $tarefas
         ]);
-
     }
 
     public function create()
@@ -62,7 +60,7 @@ class TarefaController extends Controller
 
     public function store(Request $request)
     {
-        $validate = $request->validate([
+        $request->validate([
             'categoria_id' => 'required',
             'titulo' => 'required',
             'descricao' => 'required',
