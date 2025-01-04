@@ -5,7 +5,7 @@ import SubmitButton from '@/Components/SubmitButton.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
 const props = defineProps({
-    categorias: Object, // Alterado para Object pois categorias agora é um objeto de paginação
+    categorias: Object,
 });
 
 function create() {

@@ -5,7 +5,7 @@ import SubmitButton from '@/Components/SubmitButton.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
 const props = defineProps({
-    tarefas: Object, // Alterado para Object pois tarefas agora é um objeto de paginação
+    tarefas: Object,
 });
 
 function create() {
@@ -76,7 +76,7 @@ function getStatusClass(status) {
                     </div>
 
                     <div class="q-gutter-md q-mt-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
-                        <q-card v-for="tarefa in props.tarefas" :key="tarefa.id" class="q-pa-md rounded-xl shadow-lg flex flex-col justify-between">
+                        <!-- <q-card v-for="tarefa in props.tarefas" :key="tarefa.id" class="q-pa-md rounded-xl shadow-lg flex flex-col justify-between">
                             <q-card-section class="text-center p-4 max-w--full">
                                 <h3 class="text-xl font-semibold text-indigo-700 mb-2">ID: {{ tarefa.id }}</h3>
                                 <p class="text-lg font-medium text-gray-800">Titulo: {{ tarefa.titulo }}</p>
@@ -86,16 +86,16 @@ function getStatusClass(status) {
                                 <p class="text-lg font-medium text-gray-800">Situação: {{ tarefa.ativo ? "Ativo" : "Inativo" }}</p>
                                 <p v-if="tarefa.data_conclusao && tarefa.status === 'Concluída'" class="text-lg font-medium text-gray-800">Data de Conclusão: {{ tarefa.data_conclusao }}</p>
                                 <p class="text-lg font-medium text-gray-800">Criado: {{ tarefa.created_at }}</p>
-                            </q-card-section>
+                            </q-card-section> -->
 
-                            <q-card-actions class="flex justify-center gap-4 p-4">
+                            <!-- <q-card-actions class="flex justify-center gap-4 p-4">
                                 <q-btn icon="edit" color="secondary" @click="edit(tarefa.id)" class="q-mr-sm text-white rounded-lg py-2 px-4 transition-colors duration-200" />
                                 <q-btn icon="autorenew" color="blue" @click="avancarStatus(tarefa.id)" class="q-mr-sm text-white rounded-lg py-2 px-4 transition-colors duration-200" />
                                 <q-btn icon="delete" color="negative" @click="deleteCategory(tarefa.id)" class="text-white rounded-lg py-2 px-4 transition-colors duration-200" />
                                 <q-btn v-if="tarefa.ativo" icon="visibility_off" color="negative" @click="desativarTarefa(tarefa.id)" class="q-mr-sm text-white rounded-lg py-2 px-4 transition-colors duration-200" />
                                 <q-btn v-else icon="visibility" color="positive" @click="ativarTarefa(tarefa.id)" class="q-mr-sm text-white rounded-lg py-2 px-4 transition-colors duration-200" />
-                            </q-card-actions>
-                        </q-card>
+                            </q-card-actions> -->
+                        <!-- </q-card> -->
                     </div>
                 </div>
             </div>
