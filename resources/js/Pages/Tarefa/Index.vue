@@ -69,7 +69,7 @@ function getStatusClass(status) {
                 <div class="overflow-hidden bg-white shadow-lg sm:rounded-lg">
 
                     <div class="flex items-center justify-center px-5 py-4 mt-5">
-                        <SubmitButton @click="create"
+                        <SubmitButton @click="create()"
                             class="text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg py-2 px-4">
                             Adicionar Tarefa
                         </SubmitButton>
