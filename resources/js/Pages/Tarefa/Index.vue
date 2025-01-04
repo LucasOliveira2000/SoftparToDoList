@@ -75,8 +75,8 @@ function getStatusClass(status) {
                         </SubmitButton>
                     </div>
 
-                    <div v-if="props.tarefas.data.length > 0" class="q-gutter-md q-mt-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
-                        <q-card v-for="tarefa in props.tarefas.data" :key="tarefa.id" class="q-pa-md rounded-xl shadow-lg flex flex-col justify-between">
+                    <div class="q-gutter-md q-mt-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
+                        <q-card v-for="tarefa in props.tarefas" :key="tarefa.id" class="q-pa-md rounded-xl shadow-lg flex flex-col justify-between">
                             <q-card-section class="text-center p-4 max-w--full">
                                 <h3 class="text-xl font-semibold text-indigo-700 mb-2">ID: {{ tarefa.id }}</h3>
                                 <p class="text-lg font-medium text-gray-800">Titulo: {{ tarefa.titulo }}</p>
